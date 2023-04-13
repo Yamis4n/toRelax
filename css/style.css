@@ -71,23 +71,28 @@ div{
 }
 .title{
   color: white;
-  margin-bottom: 10px;
   font-style:normal;
+  vertical-align: center;
   text-align: center;
-  margin-top: 50px;
-  font-family: arial;
+  font-family: Arial, Helvetica, sans-serif;
 }
 p{
   text-align: center;
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-body,html {
+html {
   height: 100%;
   width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 body {
+  height: 80%;
+  width: 95%;
   background-color: rgb(216,191,216);
 }
 
