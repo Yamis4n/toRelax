@@ -1,0 +1,97 @@
+/* botões: */
+
+button{
+  background-color: transparent;
+  border-width: 1x;
+  height: 36px;
+  width: 33%;
+  border-color: black;
+  transition-duration: 0.5s;
+  float: left;
+}
+
+.startBtn:hover{
+  background-color: green;
+  color: white;
+  border-color: white;
+}
+
+.stopBtn:hover{
+  background-color: orange;
+  color: white;
+  border-color: white;
+}
+
+.resetBtn:hover{
+  background-color: red;
+  color: white;
+  border-color: white;
+}
+
+.btnTable{
+  height: 24%;
+  width: 99%;
+  display: inline-block;
+}
+
+.buttons{
+  background-color: transparent;
+  display: inline-block;
+  height: 100%;
+  width: 33%;
+}
+
+.nothing{
+  background-color: transparent;
+  display: inline-block;
+  height: 100%;
+  width: 33%;
+}
+
+div{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.counters{
+  height: 24%;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.info-text {
+  margin-bottom: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  width: 99%;
+  height: 50%;
+  font-size: 80px
+}
+.title{
+  margin-bottom: 10px;
+  font-style:normal;
+  text-align: center;
+  margin-top: 50px;
+  font-family: arial;
+}
+p{
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body,html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: white;
+}
+
+
