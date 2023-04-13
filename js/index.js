@@ -19,7 +19,6 @@ function startBtn() {
 }
 
 function pauseBtn() {
-  console.log(paused);
   if (sec > -1 && paused == false){
     btn_pause.textContent = "RESUME";
     clearInterval(countInterval);

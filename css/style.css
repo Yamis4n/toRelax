@@ -1,31 +1,27 @@
 /* botões: */
 
 button{
+  color: white;
   background-color: transparent;
-  border-width: 1x;
-  height: 36px;
+  height: 30%;
   width: 33%;
-  border-color: black;
   transition-duration: 0.5s;
   float: left;
 }
 
 .startBtn:hover{
   background-color: green;
-  color: white;
-  border-color: white;
+
 }
 
 .stopBtn:hover{
   background-color: orange;
-  color: white;
-  border-color: white;
+
 }
 
 .resetBtn:hover{
   background-color: red;
-  color: white;
-  border-color: white;
+
 }
 
 .btnTable{
@@ -74,6 +70,7 @@ div{
   font-size: 80px
 }
 .title{
+  color: white;
   margin-bottom: 10px;
   font-style:normal;
   text-align: center;
@@ -82,7 +79,7 @@ div{
 }
 p{
   text-align: center;
-  color: black;
+  color: white;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -91,7 +88,7 @@ body,html {
   width: 100%;
 }
 body {
-  background-color: white;
+  background-color: rgb(216,191,216);
 }
 
 
