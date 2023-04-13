@@ -1,26 +1,32 @@
 /* botões: */
 
 button{
-  color: white;
+  color: rgb(80, 250, 123);
   background-color: transparent;
   height: 30%;
-  width: 33%;
+  width: 25%;
   transition-duration: 0.5s;
-  float: left;
+  border-radius: 30px;
+  border-color: transparent;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
+button:hover{
+  color: rgb(40, 42, 54); 
+}
 .startBtn:hover{
-  background-color: green;
+  background-color: rgb(80, 250, 123);
 
 }
 
 .stopBtn:hover{
-  background-color: orange;
+  background-color: rgb(255, 184, 108);
 
 }
 
 .resetBtn:hover{
-  background-color: red;
+  background-color: rgb(255, 85, 85);
 
 }
 
@@ -34,14 +40,14 @@ button{
   background-color: transparent;
   display: inline-block;
   height: 100%;
-  width: 33%;
+  width: 39%;
 }
 
 .nothing{
   background-color: transparent;
   display: inline-block;
   height: 100%;
-  width: 33%;
+  width: 30%;
 }
 
 div{
@@ -70,7 +76,8 @@ div{
   font-size: 80px
 }
 .title{
-  color: white;
+  margin-left: 2px;
+  color:  rgb(80, 250, 123);
   font-style:normal;
   vertical-align: center;
   text-align: center;
@@ -78,7 +85,7 @@ div{
 }
 p{
   text-align: center;
-  color: white;
+  color: rgb(80, 250, 123);
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -91,9 +98,9 @@ html {
   margin-left: 0px;
 }
 body {
-  height: 80%;
+  height: 65%;
   width: 95%;
-  background-color: rgb(216,191,216);
+  background-color: rgb(40,42,54);
 }
 
 
