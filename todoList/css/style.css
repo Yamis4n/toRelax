@@ -1,0 +1,24 @@
+html {
+ height: 100%;
+ width: 100%;
+}
+body, .box1 {
+  height: 80%;
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.table {
+  display: inline-block;
+}
+
+.nothing{
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: blue;
+}
