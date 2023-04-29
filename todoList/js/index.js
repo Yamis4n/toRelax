@@ -20,13 +20,22 @@ function createCheckBox(){
   let label = document.createElement("label");
   let input = document.createElement("input");
   
+  // gambiarra:
+  let newLineDiv = document.createElement("div");
+  newLineDiv.className = "newLineDiv";
+
   input.type = "checkbox";
   input.id = id;
   
   label.textContent = labelContent;
   label.hmtlFor = id;
 
+
+
   let root = document.getElementById("root");
   root.appendChild(input);
   root.appendChild(label);
+  root.appendChild(newLineDiv);
 }
+
+
