@@ -24,7 +24,6 @@ function createCheckBox(root, taskName){
   
   label.textContent = taskName;
   label.hmtlFor = id;
-
   root.appendChild(input);
   root.appendChild(label);
 }
