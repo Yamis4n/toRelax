@@ -1,0 +1,54 @@
+html {
+ height: 100%;
+ width: 100%;
+}
+
+body, .box1 {
+  height: 93%;
+  width: 99%;
+}
+
+.box1 {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.timer {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 10%;
+  width: 100%;
+}
+
+.timer-text {
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.table-grid {
+  height: 60%;
+  width: 99%;
+  margin-left: 0.3%;
+}
+
+.zone {
+  display: inline-block ;
+  width: 24%;
+  height: 100%;
+  margin-right: 0px;
+  vertical-align: top;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100%;
+}
+
+.new-task {
+  margin-top: 1%;
+  margin-botton: 1%;
+  height: 10%;
+}
