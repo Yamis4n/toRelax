@@ -36,6 +36,11 @@ h1 {
   border-width: 2px;
 }
 
+.new-task-button {
+  border-style: solid;
+  border-color: white;
+  background-color: transparent;
+}
 
 
 
