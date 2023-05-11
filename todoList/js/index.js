@@ -1,5 +1,7 @@
-const NEWTASK  = document.getElementById("newTaskButton");
+const NEWTASK  = document.getElementById("submitButton");
 const ROOT     = document.getElementById("tasksZone");
+const INPUT    = document.getElementById("newTaskButton");
+
 
 let ID = 0;
 
@@ -19,17 +21,6 @@ function createDiv(taskContent){
 
 }
 
-// Esta função pega o texto da tarefa:
-function getText() {
-  console.log(NEWTASK.childNodes.length);
-  if (NEWTASK.childNodes.length == 1){
-    const input = document.createElement("input");
-    input.type = "text";
-    NEWTASK.appendChild(input);
-  }
-}
-
-
 
 function showDelete(taskTarget) {
   const taskDiv = document.getElementById(taskTarget);
@@ -40,7 +31,15 @@ ROOT.addEventListener("click", function(event){
   console.log(event.target);
   showDelete(event.target.id);
 })
+
 NEWTASK.addEventListener("click", function (event) {
-  getText();
-  createDiv("teste");
+  if (INPUT.value){
+    createDiv(INPUT.value);
+    INPUT.value = "";
+  }
+  else {
+    alert("Tarefa sem Nome");
+  }
 });
+
+

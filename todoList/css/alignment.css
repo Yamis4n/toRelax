@@ -49,7 +49,7 @@ h1 {
 
 .new-task {
   margin-top: 1%;
-  margin-botton: 1%;
+  margin-bottom: 1%;
   margin-left:  auto;
   margin-right: auto;
   vertical-align: center;
@@ -62,16 +62,17 @@ h1 {
 
 
 .new-task-button {
-  width: 90%;
+  width: 75%;
   height: 10%;
-  margin: 3% auto;
+  margin: 3% auto 3% 1%;
   border-width: 1px;
   border-radius: 5px;
+  display: inline;
 }
 
 
 .tasks {
-  height: 90%; 
+  height: 70%; 
 
   
 }
