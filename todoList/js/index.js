@@ -1,9 +1,6 @@
 const NEWTASK  = document.getElementById("submitButton");
-const ROOT     = document.getElementById("tasksZone");
 const INPUT    = document.getElementById("newTaskButton");
-const DOING    = document.getElementById("tasksZone-doing");
-const FINISHED = document.getElementById("tasksZone-finished");
-const CANCELED = document.getElementById("tasksZone-canceled");
+const ROOT     = document.getElementById("tasksZoneT");
 
 
 let ID = 0;
@@ -11,34 +8,47 @@ let ID = 0;
 
 // Esta função cria uma div que contém o texto da "tarefa"
 function createDiv(taskContent){
-  const div      = document.createElement("div");
-  const text     = document.createTextNode(taskContent);
-  
+  const div       = document.createElement("div");
+  const paragraph = document.createElement("p");
+  const text      = document.createTextNode(taskContent);
   ID += 1;
+  let delID = "delButton"+ID;
+  let divID = "task"+ID;
 
-  div.appendChild(text);
+  
   div.className   = "new-task";
-  div.id          = "task"+ID;
+  div.id          = divID;
   div.draggable   = "true";
   div.ondragstart = function () {
     drag(event);
   };
+  div.onclick = function () {
+    const del = document.getElementById(delID);
+    if (del){
+      del.remove();
+    }
+    else {
+      div.appendChild(createDelete(delID, divID));
+    }
+  }
 
-
+  paragraph.appendChild(text);
+  div.appendChild(paragraph);
   ROOT.appendChild(div);
 
 }
 
-
-function showDelete(taskTarget) {
-  const taskDiv = document.getElementById(taskTarget);
-  console.log(taskDiv.childNodes.length);
-  if (taskDiv.childNodes.length > 1){
-    taskDiv.removeChild(taskDiv.childNodes[1]);
+function createDelete(delID, divID) { 
+  const delButton = document.createElement("input");
+  delButton.id= delID;
+  delButton.className = "del-button";
+  delButton.type="button";
+  delButton.style.marginleft = "auto";
+  delButton.onclick = function () {
+    task = document.getElementById(divID);
+    task.remove();
   }
-  else{
-    alert("ta limpo");
-  }
+  return delButton;
 }
 
 
@@ -54,30 +64,15 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   let data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  const newChild = document.getElementById(data);
+  
+  if (ev.target.id == "tasksZone" + ev.target.id[9]){
+    ev.target.appendChild(newChild);
+  }
 }
-
 
 // listeners:
 
-
-ROOT.addEventListener("click", function(event){
-  console.log(event.target);
-  showDelete(event.target.id);
-})
-
-DOING.addEventListener("click", function(event){
-  console.log(event.target);
-  showDelete(event.target.id);
-})
-FINISHED.addEventListener("click", function(event){
-  console.log(event.target);
-  showDelete(event.target.id);
-})
-CANCELED.addEventListener("click", function(event){
-  console.log(event.target);
-  showDelete(event.target.id);
-})
 NEWTASK.addEventListener("click", function (event) {
   if (INPUT.value){
     createDiv(INPUT.value);
