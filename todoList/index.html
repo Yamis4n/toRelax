@@ -22,25 +22,36 @@
              
           <input class="new-task-button" type="text" id="newTaskButton"></input>
           <input class="submitButton" type="button" id="submitButton" value="OK"></input>
-          <div class="tasks" id="tasksZone"></div>
+          <div class="tasks" id="tasksZone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
         
         <div class="zone">
+          
           <div class="zone-title">
             <h1>Doing</h1>
           </div>
+          
+          <div class="tasks" id="tasksZone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
         </div>
 
         <div class="zone">  
+          
           <div class="zone-title">
             <h1>Finished</h1>
           </div>
+
+          <div class="tasks" id="tasksZone-finished" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
         </div>
 
         <div class="zone">
           <div class="zone-title">
             <h1>Canceled</h1>
           </div>
+
+          <div class="tasks" id="tasksZone-canceled" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
         </div>
 
       </div>
