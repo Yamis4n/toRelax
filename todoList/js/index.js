@@ -1,6 +1,9 @@
 const NEWTASK  = document.getElementById("submitButton");
 const ROOT     = document.getElementById("tasksZone");
 const INPUT    = document.getElementById("newTaskButton");
+const DOING    = document.getElementById("tasksZone-doing");
+const FINISHED = document.getElementById("tasksZone-finished");
+const CANCELED = document.getElementById("tasksZone-canceled");
 
 
 let ID = 0;
@@ -30,6 +33,12 @@ function createDiv(taskContent){
 function showDelete(taskTarget) {
   const taskDiv = document.getElementById(taskTarget);
   console.log(taskDiv.childNodes.length);
+  if (taskDiv.childNodes.length > 1){
+    taskDiv.removeChild(taskDiv.childNodes[1]);
+  }
+  else{
+    alert("ta limpo");
+  }
 }
 
 
@@ -57,6 +66,18 @@ ROOT.addEventListener("click", function(event){
   showDelete(event.target.id);
 })
 
+DOING.addEventListener("click", function(event){
+  console.log(event.target);
+  showDelete(event.target.id);
+})
+FINISHED.addEventListener("click", function(event){
+  console.log(event.target);
+  showDelete(event.target.id);
+})
+CANCELED.addEventListener("click", function(event){
+  console.log(event.target);
+  showDelete(event.target.id);
+})
 NEWTASK.addEventListener("click", function (event) {
   if (INPUT.value){
     createDiv(INPUT.value);
